@@ -70,8 +70,7 @@ Se empleará la metodología **TDSP** de Microsoft para estructurar el desarroll
 | **Orquestación** | Cloud Composer / Cloud Scheduler | Coordinación de pipelines y tareas periódicas. |
 | **Infraestructura como código** | Terraform / gcloud CLI | Despliegue reproducible de la solución. |
 
-![Arquitectura Videogames Purchases](https://github.com/user-attachments/assets/879a9ab9-ae2a-4e18-90ce-a559fff13387)
-
+<img width="1319" height="412" alt="image" src="https://github.com/user-attachments/assets/f006fe81-646e-4d0d-8b71-ce0e59f9b240" />
 
 ---
 
