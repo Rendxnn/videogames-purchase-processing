@@ -1,0 +1,22 @@
+[Unit]
+Description=Purchases Emitter (Pub/Sub)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/purchases-emitter
+Environment=PROJECT_ID=streaming-prod-475121
+Environment=TOPIC_ID=events.raw
+Environment=DATASET_URI=gs://streaming-prod-dl/curated/games_march2025_cleaned.csv
+Environment=INTERVAL_S=0.25
+Environment=LIMIT_ROWS=5000
+ExecStart=/opt/purchases-emitter/venv/bin/python /opt/purchases-emitter/emitter.py
+Restart=always
+RestartSec=5
+StandardOutput=append:/var/log/purchases-emitter/emitter.log
+StandardError=append:/var/log/purchases-emitter/emitter.err
+
+[Install]
+WantedBy=multi-user.target
